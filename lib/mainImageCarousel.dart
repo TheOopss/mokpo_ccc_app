@@ -8,8 +8,8 @@ final imageList = [
   Image.asset('assets/images/blackCat.jpg', fit: BoxFit.scaleDown),
 ];
 
-class MailCarousel extends StatelessWidget {
-  const MailCarousel({Key? key}) : super(key: key);
+class MainCarousel extends StatelessWidget {
+  const MainCarousel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

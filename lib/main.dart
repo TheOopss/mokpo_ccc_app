@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled2/hamburgerMenu.dart';
 import 'package:untitled2/mainImageCarousel.dart';
 
-//하이하이
+
 void main() {
   runApp(MaterialApp(
       home: MyApp(),
@@ -15,13 +15,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(),
       drawer: HamburgerMenu(),
-      body: Column(
-        children: [
-          MailCarousel(),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            pinned: true,
+            expandedHeight: 250.0,
+            flexibleSpace: FlexibleSpaceBar(
+              title: MainCarousel(),
+            )
+          ),
+          SliverList(delegate: SliverChildBuilderDelegate(
+            (context, index) => ListTile(title: Text('text $index')),
+            childCount: 150,
+          ))
         ],
+
+
       ),
     );
   }
