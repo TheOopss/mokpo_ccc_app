@@ -22,13 +22,17 @@ class MyApp extends StatelessWidget {
             pinned: true,
             expandedHeight: 250.0,
             flexibleSpace: FlexibleSpaceBar(
-              title: MainCarousel(),
+              title: Text('ccc'),
             )
           ),
+          SliverToBoxAdapter(child: MainCarousel()),
           SliverList(delegate: SliverChildBuilderDelegate(
-            (context, index) => ListTile(title: Text('text $index')),
-            childCount: 150,
-          ))
+              (context, index) => ListTile(title: Text('text $index')),
+              childCount: 150
+              ,
+            ),
+
+          )
         ],
 
 
