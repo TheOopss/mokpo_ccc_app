@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled2/hamburgerMenu.dart';
 import 'package:untitled2/mainImageCarousel.dart';
 
-
+//하이하이
 void main() {
   runApp(MaterialApp(
       home: MyApp(),
